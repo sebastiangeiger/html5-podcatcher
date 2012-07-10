@@ -1,5 +1,5 @@
-require 'lib/entities/subscription.rb'
-require 'lib/entities/user.rb'
+require 'domain_model/entities/subscription.rb'
+require 'domain_model/entities/user.rb'
 
 module Subscriber
   def subscribe_to(podcast)

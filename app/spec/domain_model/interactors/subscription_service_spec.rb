@@ -1,5 +1,5 @@
-require 'lib/interactors/subscription_service.rb'
-require 'lib/entities/podcast.rb'
+require 'domain_model/interactors/subscription_service.rb'
+require 'domain_model/entities/podcast.rb'
 
 describe SubscriptionService do
   it 'should register a subscription for a podcast-series by a user' do
