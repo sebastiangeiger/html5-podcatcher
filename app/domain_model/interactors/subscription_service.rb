@@ -1,5 +1,6 @@
 require 'domain_model/entities/subscription.rb'
 require 'domain_model/entities/user.rb'
+require 'domain_model/db/subscription_gateway.rb'
 
 module Subscriber
   def subscribe_to(podcast)
