@@ -49,12 +49,15 @@ describe 'The API' do
 
   end
 
-  # describe 'post to /podcasts' do
-  #   it 'should create the Podcast model' do
-  #     hash = {"name" => "some name", "description" => "podcast #1"}
-  #     Podcast.should_receive(:create).with(data_hash)
-  #     request '/api/v1/podcasts', :method => :post, :input => data_hash.to_json
-  #   end
-  # end
+  describe 'post to /podcasts' do
+    subject { post '/api/v1/podcasts', data_hash.to_json }
+    context 'with a valid feed url' do
+      let(:data_hash) { {"url" => "http://rubyrogues.com/feed/"} }
+      it 'should return the title of the podcast' do
+        subject
+        JSON.parse(last_response.body)["title"].should == "Ruby Rogues"
+      end
+    end
+  end
 
 end
