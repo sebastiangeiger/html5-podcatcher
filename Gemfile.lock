@@ -1,3 +1,9 @@
+PATH
+  remote: ../rpodcast
+  specs:
+    rpodcast (0.1)
+      hpricot
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -10,6 +16,7 @@ GEM
       thor (>= 0.14.6)
     guard-rspec (1.2.0)
       guard (>= 1.1)
+    hpricot (0.8.6)
     json (1.7.3)
     listen (0.4.7)
       rb-fchange (~> 0.0.5)
@@ -54,6 +61,7 @@ DEPENDENCIES
   guard-rspec
   json
   rack-test
+  rpodcast!
   rspec (~> 2.0)
   sinatra
   sinatra-contrib
