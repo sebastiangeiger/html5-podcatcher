@@ -1,6 +1,6 @@
-require 'domain_model/entities/subscription.rb'
-require 'domain_model/entities/user.rb'
-require 'domain_model/db/subscription_gateway.rb'
+require File.expand_path('../../../domain_model/entities/subscription', __FILE__)
+require File.expand_path('../../../domain_model/entities/user.rb', __FILE__)
+require File.expand_path('../../../domain_model/db/subscription_gateway.rb', __FILE__)
 
 module Subscriber
   def subscribe_to(podcast)

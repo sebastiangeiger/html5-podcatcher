@@ -1,5 +1,5 @@
-require 'domain_model/interactors/subscription_service.rb'
-require 'domain_model/entities/podcast.rb'
+require File.expand_path('../../../../app/domain_model/interactors/subscription_service', __FILE__)
+require File.expand_path('../../../../app/domain_model/entities/podcast', __FILE__)
 
 describe SubscriptionService do
   it 'should register a subscription for a podcast-series by a user' do

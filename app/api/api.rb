@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'json'
-require 'domain_model/interactors/list_all_podcasts.rb'
+require File.expand_path('../../domain_model/interactors/list_all_podcasts',__FILE__)
+require File.expand_path('../../domain_model/interactors/retrieve_feed_service',__FILE__)
 
 get '/api/v1/podcasts' do
   content_type :json

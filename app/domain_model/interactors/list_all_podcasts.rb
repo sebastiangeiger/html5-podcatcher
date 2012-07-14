@@ -1,5 +1,5 @@
-require 'domain_model/db/podcasts_gateway'
-require 'domain_model/entities/podcast.rb'
+require File.expand_path('../../../domain_model/db/podcasts_gateway', __FILE__)
+require File.expand_path('../../../domain_model/entities/podcast', __FILE__)
 class ListAllPodcasts
   def self.call
     new.call
