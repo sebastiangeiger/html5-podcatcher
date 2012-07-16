@@ -5,10 +5,13 @@ gem "rpodcast", :path => "../rpodcast"
 group :test do
   gem "rspec", "~> 2.0"
   gem "rack-test"
+  gem "vcr"
+  gem "webmock"
 end
 
 group :development do
   gem "guard-rspec"
+  gem "pry"
 end
 
 group :api do

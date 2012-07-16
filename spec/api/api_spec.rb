@@ -1,10 +1,18 @@
 ENV['RACK_ENV'] = 'test'
+require 'rubygems'
+require 'bundler/setup'
 require 'app/api/api.rb'
 require 'rspec'
 require 'rack/test'
+require 'vcr'
 
 RSpec.configure do |conf|
   conf.include Rack::Test::Methods
+end
+
+VCR.configure do |c|
+  c.cassette_library_dir = 'fixtures/vcr_cassettes'
+  c.hook_into :webmock # or :fakeweb
 end
 
 describe 'The API' do
@@ -51,10 +59,15 @@ describe 'The API' do
 
   describe 'post to /podcasts' do
     subject { post '/api/v1/podcasts', data_hash.to_json }
-    context 'with a valid feed url' do
+    context 'with a valid feed url that is not in the database' do
       let(:data_hash) { {"url" => "http://rubyrogues.com/feed/"} }
+      before do
+        Model::PodcastsGateway.stub(:find_by_url).with(data_hash["url"]).and_return nil
+      end
       it 'should return the title of the podcast' do
-        subject
+        VCR.use_cassette('ruby_rogues') do
+          subject
+        end
         JSON.parse(last_response.body)["title"].should == "Ruby Rogues"
       end
     end
