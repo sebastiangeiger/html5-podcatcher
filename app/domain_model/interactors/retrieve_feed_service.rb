@@ -16,6 +16,8 @@ class RetrieveFeedService
     unless podcast
        podcast = External::PodcastsGateway.retrieve(@url)
     end
+    podcast.extend Model::HashablePodcast
+    podcast.to_hash
   end
 
 end
