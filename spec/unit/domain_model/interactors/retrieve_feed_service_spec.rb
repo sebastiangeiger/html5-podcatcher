@@ -1,6 +1,6 @@
-require File.expand_path('../../../../app/domain_model/interactors/retrieve_feed_service.rb', __FILE__)
-require File.expand_path('../../../../app/domain_model/entities/hashable_podcast.rb', __FILE__)
-require File.expand_path('../../../../app/domain_model/entities/podcast.rb', __FILE__)
+require File.expand_path('../../../../../app/domain_model/interactors/retrieve_feed_service.rb', __FILE__)
+require File.expand_path('../../../../../app/domain_model/entities/hashable_podcast.rb', __FILE__)
+require File.expand_path('../../../../../app/domain_model/entities/podcast.rb', __FILE__)
 
 describe RetrieveFeedService do
   subject { podcast = RetrieveFeedService.new(url).call }

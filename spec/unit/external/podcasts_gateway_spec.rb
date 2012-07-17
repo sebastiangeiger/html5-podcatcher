@@ -1,4 +1,4 @@
-require File.expand_path('../../../app/external/podcasts_gateway', __FILE__)
+require File.expand_path('../../../../app/external/podcasts_gateway', __FILE__)
 require 'rubygems'
 require 'bundler/setup'
 require 'vcr'

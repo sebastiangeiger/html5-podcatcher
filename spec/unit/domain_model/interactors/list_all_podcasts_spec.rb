@@ -1,4 +1,4 @@
-require File.expand_path('../../../../app/domain_model/interactors/list_all_podcasts', __FILE__)
+require File.expand_path('../../../../../app/domain_model/interactors/list_all_podcasts', __FILE__)
 
 describe ListAllPodcasts do
   describe ".call" do
