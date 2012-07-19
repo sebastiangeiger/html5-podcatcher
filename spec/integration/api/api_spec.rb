@@ -1,7 +1,7 @@
 ENV['RACK_ENV'] = 'test'
 require 'rubygems'
 require 'bundler/setup'
-require 'app/api/api.rb'
+require 'app/app.rb'
 require 'rspec'
 require 'rack/test'
 require 'vcr'
@@ -12,7 +12,7 @@ end
 
 describe 'The API' do
   def app
-    Sinatra::Application
+    HtmlFivePodcatcher
   end
 
   describe 'get on /podcasts' do

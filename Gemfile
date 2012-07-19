@@ -1,12 +1,14 @@
 source "https://rubygems.org"
 
 gem "rpodcast", :path => "../rpodcast"
+gem "haml"
 
 group :test do
   gem "rspec", "~> 2.0"
   gem "rack-test"
   gem "vcr"
   gem "webmock"
+  gem "capybara"
 end
 
 group :development do

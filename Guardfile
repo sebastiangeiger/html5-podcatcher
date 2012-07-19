@@ -3,8 +3,10 @@
 
 guard 'rspec', :version => 2 do
   watch(%r{^spec/.+_spec\.rb$})
-  watch(%r{^app/domain_model/(.+)\.rb$})     { |m| "spec/domain_model/#{m[1]}_spec.rb" }
-  watch(%r{^app/api/(.+)\.rb$})     { |m| "spec/api/#{m[1]}_spec.rb" }
+  watch(%r{^app/domain_model/(.+)\.rb$}) { |m| "spec/domain_model/#{m[1]}_spec.rb" }
+  watch(%r{^app/api/api.rb$})            { |m| "spec/integration/api/api_spec.rb" }
+  watch(%r{^app/app.rb$})                { |m| "spec/acceptance/api/*.rb" }
+  watch(%r{^app/view/(.+).haml$})        { |m| "spec/acceptance/api/*.rb" }
   watch(%r{^app/external/(.+)\.rb$})     { |m| "spec/external/#{m[1]}_spec.rb" }
 end
 
