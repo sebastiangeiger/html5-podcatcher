@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+sh tools/test_to_code_ratio.sh

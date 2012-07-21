@@ -1,0 +1,9 @@
+#!/bin/sh
+uncomitted_files=$(git diff-files --quiet)
+if [ $? -ne "0" ]; then
+  echo "ERROR: You have a dirty working copy. This could affect how the test are run."
+  exit 1
+fi
+
+echo "Running rspec tests, patience please!"
+rspec
