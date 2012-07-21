@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "rpodcast", :path => "../rpodcast"
+gem "rpodcast", :git => "git://github.com/sebastiangeiger/rpodcast.git"
 gem "haml"
 
 group :test do

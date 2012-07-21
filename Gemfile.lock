@@ -1,5 +1,6 @@
-PATH
-  remote: ../rpodcast
+GIT
+  remote: git://github.com/sebastiangeiger/rpodcast.git
+  revision: 2d8660c02ea029226666e0040e21f58e509c7e8f
   specs:
     rpodcast (0.1)
       hpricot

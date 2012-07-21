@@ -1,5 +1,8 @@
 require "open-uri"
+require "rubygems"
+require "bundler/setup"
 require "rpodcast"
+
 module External
   class PodcastsGateway
     def self.retrieve(url)
